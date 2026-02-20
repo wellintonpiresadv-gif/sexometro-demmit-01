@@ -10,37 +10,37 @@ import { Trophy, Info, Check, X, ChevronLeft, ChevronRight } from 'lucide-react'
 // --- Constants & Data ---
 
 const HEALTH_MESSAGES = [
-  "Dia 1: Estabilidade hormonal. Seu corpo começa a regular os níveis de cortisol.",
-  "Dia 2: Equilíbrio inicial. O sistema endócrino mantém a homeostase.",
-  "Dia 3: Pico de testosterona. Você pode sentir um aumento na energia e leve irritabilidade.",
-  "Dia 4: Foco mental. A energia física começa a ser canalizada para outras atividades.",
-  "Dia 5: Sensibilidade aumentada. Receptores de dopamina começam a se recalibrar.",
-  "Dia 6: Melhora na pele. A regulação hormonal pode reduzir a oleosidade excessiva.",
-  "Dia 7: Alerta de estresse. Níveis de cortisol podem subir; busque atividades relaxantes.",
-  "Dia 8: Vitalidade física. Aumento na disposição para exercícios de força.",
-  "Dia 9: Clareza cognitiva. Menos 'névoa mental' relatada por muitos usuários.",
-  "Dia 10: Estabilização do humor. O corpo se adapta ao novo ciclo biológico.",
-  "Dia 11: Recuperação muscular. Otimização na síntese proteica natural.",
-  "Dia 12: Autocontrole. Fortalecimento das vias neurais de gratificação tardia.",
-  "Dia 13: Libido em transição. O desejo pode flutuar enquanto o corpo se ajusta.",
-  "Dia 14: Queda na ocitocina. Você pode sentir mais necessidade de contato social não sexual.",
-  "Dia 15: Sono profundo. Melhora na qualidade das fases REM do sono.",
-  "Dia 16: Confiança. Sensação de domínio sobre os próprios impulsos.",
-  "Dia 17: Imunidade. O sistema de defesa do corpo opera em níveis estáveis.",
-  "Dia 18: Criatividade. A 'energia criativa' costuma atingir um novo patamar.",
-  "Dia 19: Redução de ansiedade. Menos dependência de picos rápidos de dopamina.",
-  "Dia 20: Saúde cardiovascular. Ritmo cardíaco em repouso tende a se estabilizar.",
-  "Dia 21: Memória. Melhora na retenção de informações e foco prolongado.",
-  "Dia 22: Resiliência. Maior capacidade de lidar com frustrações diárias.",
-  "Dia 23: Metabolismo. Otimização na queima calórica e energia basal.",
-  "Dia 24: Postura. Aumento na percepção corporal e presença física.",
-  "Dia 25: Empatia. Melhora na leitura de sinais sociais e conexões humanas.",
-  "Dia 26: Longevidade celular. Processos de renovação celular em ritmo constante.",
-  "Dia 27: Equilíbrio emocional. Menos oscilações bruscas de humor.",
-  "Dia 28: Visão de longo prazo. Foco em objetivos maiores e menos imediatistas.",
-  "Dia 29: Desintoxicação. O sistema dopaminérgico está quase totalmente resetado.",
-  "Dia 30: Atenção à próstata. Lembre-se: o desuso prolongado requer monitoramento médico.",
-  "Dia 31: Mestre do Tempo. Você atingiu o ciclo completo de autoconhecimento biológico."
+  "Dia 1: Queda nos níveis de ocitocina pós-ato. Risco de irritabilidade leve.",
+  "Dia 2: Acúmulo de tensão. O sistema nervoso sente a falta de relaxamento.",
+  "Dia 3: Aumento da irritabilidade e impaciência. Pico de testosterona em curso.",
+  "Dia 4: Inquietação motora. Dificuldade leve em manter o foco.",
+  "Dia 5: Acúmulo de tensão na região pélvica. Alerta de reatividade alta.",
+  "Dia 6: Tensão muscular pélvica. Energia não canalizada gera estresse.",
+  "Dia 7: Aumento do cortisol (estresse) por falta de escape. Vigor instável.",
+  "Dia 8: Insônia leve. O cérebro busca picos de dopamina compensatórios.",
+  "Dia 9: Névoa mental. A energia não transmutada causa confusão.",
+  "Dia 10: Sistema imune menos ativo (queda de IgA). Alerta de saúde.",
+  "Dia 11: Congestão pélvica. Sensação de peso e desconforto lombar.",
+  "Dia 12: Ansiedade latente. O sistema de recompensa em abstinência.",
+  "Dia 13: Flutuação de libido. Risco de perda de interesse súbito.",
+  "Dia 14: Dificuldade maior em pegar no sono. Déficit de descanso profundo.",
+  "Dia 15: Sono fragmentado. O corpo exige renovação biológica.",
+  "Dia 16: Irritabilidade crônica. Reações desproporcionais a problemas.",
+  "Dia 17: Queda na Imunidade: Estresse prolongado enfraquece as defesas.",
+  "Dia 18: Bloqueio criativo. Mente obcecada por desejos básicos.",
+  "Dia 19: Fadiga adrenal. Gasto excessivo de energia na gestão da tensão.",
+  "Dia 20: Risco de sonhos eróticos e polução noturna. Alerta biológico.",
+  "Dia 21: Perda de foco. Dificuldade extrema em tarefas de paciência.",
+  "Dia 22: Instabilidade emocional. Crises de mau humor sem causa.",
+  "Dia 23: Metabolismo lento. O corpo entra em modo de conservação.",
+  "Dia 24: Tensão Crônica: Dores de cabeça e rigidez no pescoço.",
+  "Dia 25: Isolamento social. Tendência ao afastamento por falta de empatia.",
+  "Dia 26: Envelhecimento celular. Aumento do estresse oxidativo.",
+  "Dia 27: Desequilíbrio químico. Neurotransmissores em nível crítico.",
+  "Dia 28: Visão pessimista. Foco exclusivo em problemas e falhas.",
+  "Dia 29: Desconexão total. Risco de apatia severa e perda de vitalidade.",
+  "Dia 30: Risco de atrofia parcial da libido (desuso). Alerta de próstata.",
+  "Dia 31: Alerta Máximo: Seu corpo exige renovação biológica imediata."
 ];
 
 // --- Components ---
@@ -132,20 +132,20 @@ const DayCard = ({
 
         {/* Back Side (Health Info) */}
         <div 
-          className="absolute inset-0 backface-hidden bg-zinc-900 rounded-xl shadow-xl border border-zinc-800 flex flex-col p-3 rotate-y-180"
-          onClick={() => onAction('yes')} // Allow flipping back by clicking "Yes"
+          className="absolute inset-0 backface-hidden bg-zinc-900 rounded-xl shadow-xl border border-rose-900/50 flex flex-col p-3 rotate-y-180"
+          onClick={() => onAction('yes')} 
         >
           <div className="flex justify-between items-center mb-2">
-            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-tighter">Saúde</span>
-            <Info className="w-3 h-3 text-blue-400" />
+            <span className="text-[10px] font-black text-rose-500 uppercase tracking-tighter">Alerta de Saúde</span>
+            <Info className="w-3 h-3 text-rose-500 animate-pulse" />
           </div>
           <div className="flex-1 overflow-y-auto">
-            <p className="text-[11px] leading-tight text-zinc-300 font-medium">
+            <p className="text-[11px] leading-tight text-rose-100 font-bold">
               {HEALTH_MESSAGES[Math.min(streak - 1, 30)]}
             </p>
           </div>
-          <div className="mt-2 pt-2 border-t border-zinc-800 text-center">
-            <span className="text-[9px] text-zinc-500 font-mono">Sequência: {streak}d</span>
+          <div className="mt-2 pt-2 border-t border-rose-900/50 text-center">
+            <span className="text-[9px] text-rose-500 font-mono font-black">Risco Nível: {streak}</span>
           </div>
         </div>
       </motion.div>
@@ -158,60 +158,105 @@ const DayCard = ({
 const StatusCard = ({ streak, type }: { streak: number; type: 'yes' | 'no' | null }) => {
   const getDetailedAnalysis = () => {
     if (type === 'no') {
-      if (streak <= 3) return { 
-        status: "Fase de Desintoxicação", 
-        mood: "Oscilante / Expectativa", 
-        fisiologia: "O corpo está processando o excesso de prolactina residual. Os receptores de dopamina iniciam um processo de 'upregulation' para recuperar a sensibilidade natural.",
-        psicologia: "Pode haver uma leve ansiedade ou busca por recompensas rápidas (comida, redes sociais). É a fase de quebra de hábito.",
+      if (streak <= 1) return { 
+        status: "Fase de Reajuste", 
+        mood: "Oscilante", 
+        fisiologia: "Queda nos níveis de ocitocina pós-ato. O corpo inicia a privação de endorfinas habituais.",
+        psicologia: "Pico de relaxamento e sono profundo, mas com início de quebra de hábito dopaminérgico.",
         planoAcao: [
-          "Evite gatilhos visuais e digitais.",
-          "Beba 500ml extras de água para auxiliar o sistema linfático.",
-          "Pratique 5 min de respiração consciente ao sentir impulsos."
+          "Evite gatilhos visuais imediatos.",
+          "Beba água extra para auxiliar o sistema linfático.",
+          "Priorize o descanso reparador."
         ],
         color: "text-blue-600",
         bg: "bg-blue-50",
         border: "border-blue-200",
         accent: "bg-blue-600"
       };
-      if (streak <= 7) return { 
-        status: "Pico de Testosterona", 
-        mood: "Energético / Reativo", 
-        fisiologia: "Estudos indicam um pico de testosterona livre por volta do 7º dia. Há um aumento na síntese de ATP e maior prontidão muscular.",
-        psicologia: "Aumento da agressividade canalizável e da libido. A autoconfiança sobe, mas a paciência pode diminuir.",
+      if (streak <= 3) return { 
+        status: "Alerta de Irritabilidade", 
+        mood: "Impaciente", 
+        fisiologia: "Aumento da irritabilidade e impaciência. O sistema nervoso busca recompensas rápidas.",
+        psicologia: "Pico natural de testosterona em andamento (máximo em 7 dias). Autocontrole em teste.",
         planoAcao: [
-          "Canalize a energia em treinos de alta intensidade (HIIT ou Pesos).",
-          "Use a agressividade para resolver problemas pendentes no trabalho.",
-          "Evite discussões desnecessárias; sua reatividade está alta."
+          "Pratique 5 min de respiração consciente.",
+          "Canalize a energia em tarefas produtivas rápidas.",
+          "Mantenha o foco no objetivo de longo prazo."
         ],
         color: "text-amber-600",
         bg: "bg-amber-50",
         border: "border-amber-200",
         accent: "bg-amber-600"
       };
-      if (streak <= 14) return { 
-        status: "Homeostase Cognitiva", 
-        mood: "Estável / Produtivo", 
-        fisiologia: "Níveis de cortisol se estabilizam. A ocitocina começa a ser regulada por vias de conexão social profunda em vez de picos sexuais.",
-        psicologia: "Melhora significativa na memória de curto prazo e na capacidade de leitura prolongada. Menos pensamentos intrusivos.",
+      if (streak <= 6) return { 
+        status: "Tensão Pélvica", 
+        mood: "Energético / Tenso", 
+        fisiologia: "Acúmulo de tensão na região pélvica. O corpo retém energia não canalizada.",
+        psicologia: "Melhora no foco para atividades físicas e treinos pesados. Use essa força.",
         planoAcao: [
-          "Inicie um curso ou leitura densa.",
-          "Foque em conexões sociais olho no olho.",
-          "Mantenha a rotina de sono rigorosa para consolidar os ganhos."
+          "Intensifique treinos de perna ou core.",
+          "Evite ficar sentado por períodos muito longos.",
+          "Use a energia para resolver problemas complexos."
+        ],
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+        border: "border-orange-200",
+        accent: "bg-orange-600"
+      };
+      if (streak <= 9) return { 
+        status: "Pico de Cortisol", 
+        mood: "Estressado", 
+        fisiologia: "Aumento do cortisol (estresse) por falta de escape. Estabilização da testosterona em níveis altos.",
+        psicologia: "Maior vigor físico, mas com risco de reatividade emocional alta.",
+        planoAcao: [
+          "Pratique meditação ou yoga para baixar o cortisol.",
+          "Evite cafeína em excesso hoje.",
+          "Busque ambientes calmos e silenciosos."
+        ],
+        color: "text-rose-600",
+        bg: "bg-rose-50",
+        border: "border-rose-200",
+        accent: "bg-rose-600"
+      };
+      if (streak <= 13) return { 
+        status: "Alerta Imunológico", 
+        mood: "Focado / Analítico", 
+        fisiologia: "Sistema imune menos ativo (queda de IgA). Aumento da clareza mental por ausência de 'névoa'.",
+        psicologia: "Capacidade analítica no ápice. Menos distrações sexuais intrusivas.",
+        planoAcao: [
+          "Reforce a ingestão de Vitamina C e Zinco.",
+          "Aproveite para estudar ou planejar projetos.",
+          "Mantenha a higiene do sono rigorosa."
         ],
         color: "text-indigo-600",
         bg: "bg-indigo-50",
         border: "border-indigo-200",
         accent: "bg-indigo-600"
       };
-      if (streak <= 30) return { 
-        status: "Transmutação Energética", 
-        mood: "Pleno / Criativo", 
-        fisiologia: "O sistema nervoso central está operando em um novo patamar de eficiência. A energia que seria gasta em reprodução é redirecionada para reparo tecidual.",
-        psicologia: "Sensação de 'Superpoder' ou clareza absoluta. Grande facilidade em ignorar distrações triviais.",
+      if (streak <= 19) return { 
+        status: "Déficit de Sono", 
+        mood: "Determinado", 
+        fisiologia: "Dificuldade maior em pegar no sono. Economia de energia física; maior disposição matinal.",
+        psicologia: "Sensação de prontidão constante. O cérebro está altamente alerta.",
         planoAcao: [
-          "Execute projetos criativos de longo prazo.",
-          "Pratique meditação profunda para gerenciar a energia interna.",
-          "Monitore a saúde física geral; seu corpo está em modo de manutenção."
+          "Crie um ritual de desligamento digital 2h antes de dormir.",
+          "Use a disposição matinal para as tarefas mais difíceis.",
+          "Evite telas azuis à noite."
+        ],
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        border: "border-cyan-200",
+        accent: "bg-cyan-600"
+      };
+      if (streak <= 29) return { 
+        status: "Risco de Polução", 
+        mood: "Disciplinado", 
+        fisiologia: "Risco de sonhos eróticos e polução noturna. O corpo busca alívio biológico automático.",
+        psicologia: "Desenvolvimento de maior autocontrole e disciplina mental profunda.",
+        planoAcao: [
+          "Esvazie a bexiga antes de dormir.",
+          "Mantenha pensamentos limpos antes do sono.",
+          "Pratique exercícios de Kegel para controle pélvico."
         ],
         color: "text-purple-600",
         bg: "bg-purple-50",
@@ -219,50 +264,35 @@ const StatusCard = ({ streak, type }: { streak: number; type: 'yes' | 'no' | nul
         accent: "bg-purple-600"
       };
       return { 
-        status: "Alerta de Estagnação", 
-        mood: "Zen / Desconectado", 
-        fisiologia: "Atenção: O desuso prolongado pode levar a uma leve atrofia temporária da libido e acúmulo de fluidos na próstata.",
-        psicologia: "Risco de 'flatline' (perda total de interesse). Pode haver uma sensação de desapego excessivo.",
+        status: "Risco de Atrofia", 
+        mood: "Zen / Pleno", 
+        fisiologia: "Risco de atrofia parcial da libido (desuso). Reestabilização total dos receptores de dopamina.",
+        psicologia: "Clareza absoluta, mas com risco de desapego excessivo da vitalidade sexual.",
         planoAcao: [
-          "Consulte um urologista se houver desconforto.",
-          "Reavalie seus objetivos de saúde sexual.",
-          "Não force o desapego se sentir que está afetando sua vitalidade."
+          "Monitore a saúde da próstata.",
+          "Reconecte-se com sua energia vital de forma consciente.",
+          "Consulte um especialista se sentir apatia prolongada."
         ],
-        color: "text-rose-600",
-        bg: "bg-rose-50",
-        border: "border-rose-200",
-        accent: "bg-rose-600"
+        color: "text-slate-600",
+        bg: "bg-slate-50",
+        border: "border-slate-200",
+        accent: "bg-slate-600"
       };
     } else if (type === 'yes') {
-      if (streak <= 2) return { 
-        status: "Recuperação Pós-Ápice", 
-        mood: "Relaxado / Saciado", 
-        fisiologia: "Liberação massiva de ocitocina, dopamina e prolactina. O sistema parassimpático assume o controle, induzindo relaxamento muscular profundo.",
-        psicologia: "Sensação de contentamento e redução imediata de estresse. Foco reduzido para tarefas analíticas.",
+      return { 
+        status: "Reset Hormonal", 
+        mood: "Saciado / Calmo", 
+        fisiologia: "Liberação de ocitocina e prolactina. Queda temporária na testosterona livre e energia agressiva.",
+        psicologia: "Pico de relaxamento e sono profundo. Redução imediata de ansiedade e tensão.",
         planoAcao: [
-          "Priorize o sono de 8 horas hoje.",
-          "Evite decisões financeiras ou lógicas complexas nas próximas 4 horas.",
-          "Aproveite o momento para conexão emocional com o parceiro(a)."
+          "Aproveite para uma noite de sono longa.",
+          "Evite tarefas de alta performance nas próximas horas.",
+          "Hidrate-se para repor minerais."
         ],
         color: "text-emerald-600",
         bg: "bg-emerald-50",
         border: "border-emerald-200",
         accent: "bg-emerald-600"
-      };
-      return { 
-        status: "Manutenção de Vínculo", 
-        mood: "Afetivo / Estável", 
-        fisiologia: "Manutenção de níveis saudáveis de hormônios sexuais. Circulação sanguínea pélvica otimizada e saúde da próstata em dia.",
-        psicologia: "Estabilidade emocional e redução de ansiedade social. Sentimento de pertencimento e segurança.",
-        planoAcao: [
-          "Mantenha a hidratação e alimentação rica em zinco.",
-          "Equilibre a atividade com exercícios aeróbicos.",
-          "Pratique a gratidão pelo bem-estar físico alcançado."
-        ],
-        color: "text-pink-600",
-        bg: "bg-pink-50",
-        border: "border-pink-200",
-        accent: "bg-pink-600"
       };
     }
     return { 
@@ -305,8 +335,8 @@ const StatusCard = ({ streak, type }: { streak: number; type: 'yes' | 'no' | nul
         {/* Fisiologia */}
         <section>
           <div className="flex items-center gap-2 mb-1">
-            <div className={`w-1 h-3 rounded-full ${data.accent}`} />
-            <h4 className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Impacto Fisiológico</h4>
+            <div className={`w-1 h-3 rounded-full bg-rose-600`} />
+            <h4 className="text-[10px] font-black uppercase tracking-widest text-rose-500">Risco Fisiológico</h4>
           </div>
           <p className="text-xs text-zinc-600 leading-relaxed font-medium">{data.fisiologia}</p>
         </section>
@@ -314,22 +344,22 @@ const StatusCard = ({ streak, type }: { streak: number; type: 'yes' | 'no' | nul
         {/* Psicologia */}
         <section>
           <div className="flex items-center gap-2 mb-1">
-            <div className={`w-1 h-3 rounded-full ${data.accent}`} />
-            <h4 className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Estado Psicológico</h4>
+            <div className={`w-1 h-3 rounded-full bg-rose-600`} />
+            <h4 className="text-[10px] font-black uppercase tracking-widest text-rose-500">Alerta Psicológico</h4>
           </div>
           <p className="text-xs text-zinc-600 leading-relaxed font-medium">{data.psicologia}</p>
         </section>
 
         {/* Plano de Ação */}
-        <section className="bg-white/60 rounded-2xl p-4 border border-white/80">
+        <section className="bg-rose-50/50 rounded-2xl p-4 border border-rose-100">
           <div className="flex items-center gap-2 mb-3">
-            <Trophy className={`w-3 h-3 ${data.color}`} />
-            <h4 className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Plano de Ação Sugerido</h4>
+            <Info className={`w-3 h-3 text-rose-600`} />
+            <h4 className="text-[10px] font-black uppercase tracking-widest text-rose-700">Medidas de Mitigação</h4>
           </div>
           <ul className="space-y-2">
             {data.planoAcao.map((item, i) => (
               <li key={i} className="flex gap-2 items-start text-[11px] text-zinc-700 font-semibold">
-                <span className={`${data.color} mt-0.5`}>•</span>
+                <span className={`text-rose-600 mt-0.5`}>⚠</span>
                 {item}
               </li>
             ))}
