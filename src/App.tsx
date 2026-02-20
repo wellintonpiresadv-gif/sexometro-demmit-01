@@ -92,10 +92,16 @@ const DayCard = ({
         <div className={`absolute inset-0 backface-hidden rounded-xl shadow-sm border flex flex-col p-2 transition-colors ${
           isToday ? 'bg-zinc-100 border-zinc-300 ring-2 ring-zinc-200' : 'bg-white border-zinc-100'
         }`}>
+          {isToday && (
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-10">
+              <div className="bg-rose-500 text-[7px] font-black text-white px-1.5 py-0.5 rounded-full shadow-lg animate-pulse uppercase tracking-tighter">
+                Hoje
+              </div>
+            </div>
+          )}
           <div className="flex justify-between items-start mb-1">
             <span className={`text-sm font-bold ${isToday ? 'text-zinc-900' : 'text-zinc-400'}`}>
               {day}
-              {isToday && <span className="ml-1 text-[8px] uppercase tracking-tighter text-zinc-500 block">Hoje</span>}
             </span>
             {status === 'yes' && (
               <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
