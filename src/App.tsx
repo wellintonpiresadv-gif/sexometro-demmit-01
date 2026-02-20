@@ -69,11 +69,13 @@ const DayCard = ({
   day, 
   status, 
   streak, 
+  isToday,
   onAction 
 }: { 
   day: number; 
   status: 'yes' | 'no' | null; 
   streak: number;
+  isToday: boolean;
   onAction: (status: 'yes' | 'no') => void;
 }) => {
   const isFlipped = status === 'no';
@@ -87,9 +89,14 @@ const DayCard = ({
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
       >
         {/* Front Side */}
-        <div className="absolute inset-0 backface-hidden bg-white rounded-xl shadow-sm border border-zinc-100 flex flex-col p-2">
+        <div className={`absolute inset-0 backface-hidden rounded-xl shadow-sm border flex flex-col p-2 transition-colors ${
+          isToday ? 'bg-zinc-100 border-zinc-300 ring-2 ring-zinc-200' : 'bg-white border-zinc-100'
+        }`}>
           <div className="flex justify-between items-start mb-1">
-            <span className="text-sm font-bold text-zinc-400">{day}</span>
+            <span className={`text-sm font-bold ${isToday ? 'text-zinc-900' : 'text-zinc-400'}`}>
+              {day}
+              {isToday && <span className="ml-1 text-[8px] uppercase tracking-tighter text-zinc-500 block">Hoje</span>}
+            </span>
             {status === 'yes' && (
               <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
                 <Check className="w-4 h-4 text-emerald-500" />
@@ -436,26 +443,36 @@ export default function App() {
           ))}
           
           {Array.from({ length: firstDayOfMonth }).map((_, i) => (
-            <div key={`empty-${i}`} className="aspect-square" />
+            <div key={`empty-${i}`} className={`aspect-square`} />
           ))}
 
-          {Array.from({ length: daysInMonth }).map((_, i) => {
-            const day = i + 1;
-            const dateKey = `${year}-${month + 1}-${day}`;
-            const status = history[dateKey] || null;
-            const streak = calculateStreak(day, month, year);
+          {(() => {
+            const today = new Date();
+            const tDay = today.getDate();
+            const tMonth = today.getMonth();
+            const tYear = today.getFullYear();
 
-            return (
-              <div key={day} className="min-h-[85px]">
-                <DayCard
-                  day={day}
-                  status={status}
-                  streak={streak}
-                  onAction={(s) => handleAction(day, s)}
-                />
-              </div>
-            );
-          })}
+            return Array.from({ length: daysInMonth }).map((_, i) => {
+              const day = i + 1;
+              const dateKey = `${year}-${month + 1}-${day}`;
+              const status = history[dateKey] || null;
+              const streak = calculateStreak(day, month, year);
+              
+              const isToday = tDay === day && tMonth === month && tYear === year;
+
+              return (
+                <div key={day} className="min-h-[85px]">
+                  <DayCard
+                    day={day}
+                    status={status}
+                    streak={streak}
+                    isToday={isToday}
+                    onAction={(s) => handleAction(day, s)}
+                  />
+                </div>
+              );
+            });
+          })()}
         </div>
 
         {/* Legend / Stats */}
